@@ -1,0 +1,132 @@
+/* normalizing rules */
+*{
+    box-sizing: border-box
+}
+body, html{
+    min-height: 100vh;
+    margin: 0;
+}
+/* image rules */
+img{
+    max-width: 100%;
+    min-width: 200px;
+}
+figure{
+    margin: 0;
+}
+/* header and general rules */
+header{
+    font-family: "Rock Salt", cursive;
+    text-align: center;
+    color: rgb(231, 250, 163);
+    padding: 50px 50px;
+    background-color: #516e59;
+    font-size: 50px;
+    text-shadow: 15px 15px 15px rgba(16, 19, 17, 0.5);
+}
+body {
+/* background: red; */
+font-family: "Yellowtail", cursive;
+font-size: 25px;
+display: flex;
+flex-direction: column;
+}
+/* paragraph rules */
+main{
+    background-color: #9bc4a7;
+    color: rgb(80, 94, 30);
+    padding: 0 50px;
+    text-align: center;
+    font-size: 35px;
+    font-family: "Caveat Brush", cursive;
+}
+.artwork-row{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    gap: 30px;
+}
+.artwork-row:nth-child(even) .new-image{
+    grid-column: 2;
+}
+.artwork-row:nth-child(even){
+    grid-template-columns: 1fr 3fr;
+}
+.artwork-row:nth-child(even) .artwork-text{
+    grid-column: 1;
+    grid-row: 1;
+}
+.artwork-row:nth-child(odd) .new-image{
+    grid-column: 1;
+}
+.artwork-row:nth-child(odd) .artwork-text{
+    grid-column: 2;
+    grid-row: 1;
+}
+.new-image{
+    display: block;
+    width: 85%;
+    height: 75%;
+    object-fit: cover;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+}
+.artwork-row:nth-child(odd) .new-image{
+    justify-self: start;
+}
+.artwork-row:nth-child(even) .new-image{
+    justify-self: end;
+}
+.artwork-text{
+    margin: 0;
+    font-size: 50px;
+}
+.small-body{
+    font-size: 80%;
+}
+/* footer */
+footer{
+    color: rgb(231, 250, 163);
+    padding: 50px 50px;
+    background-color: #516e59;
+    font-size: 50px;
+    text-shadow: 15px 15px 15px rgba(16, 19, 17, 0.5);
+}
+/* link rules */
+a:link{
+    text-decoration: none;
+    color: rgb(2, 55, 20);
+}
+a:hover{
+    color: rgb(209, 232, 129);
+}
+a:visited{
+    color: rgb(82, 190, 118);
+}
+/* #prev, #next{
+    cursor: pointer;
+}
+#prev:hover, #next:hover{
+    color: powderblue;
+} */
+/* .right-align{
+    text-align: right;
+}
+.left-align{
+    text-align: left;
+} */
+
+.images{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    max-height: 175vh;
+}
